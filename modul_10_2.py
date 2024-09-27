@@ -15,8 +15,8 @@ class Knight(Thread):
         print(f'{self.name}, на нас напали!')
         for i in range(0, 100, self.power):
             time.sleep(1)
-            print(f'{self.name} сражается {int(i/self.power+1)} день(дня)..., осталось {100-i} воинов.')
-        return print(f'{self.name} отдержал победу спустя {100/self.power} дней')
+            print(f'{self.name} сражается {i//self.power+1} день(дня)..., осталось {100-i-self.power} воинов.')
+        return print(f'{self.name} отдержал победу спустя {100//self.power} дней')
 
 
 thread1 = Knight('Sir Lancelot', 10)
